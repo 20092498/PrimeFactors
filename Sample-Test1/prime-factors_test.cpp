@@ -3,6 +3,20 @@
 
 using namespace std;
 
-TEST(PrimeFactors, PrimeTest) {
-  EXPECT_EQ(1, 1);
+
+class PrimeTestFixture : public testing::Test {
+public:
+	PrimeFactor prime_factor;
+	vector<int> expected;
+};
+
+TEST_F(PrimeTestFixture, PrimeTest1) {
+	expected = {};
+	EXPECT_EQ(expected, prime_factor.of(1));
+}
+
+TEST_F(PrimeTestFixture, PrimeTest2) {
+	expected = {2};
+	EXPECT_EQ(expected, prime_factor.of(2));
+
 }
