@@ -18,4 +18,5 @@ TEST_F(PrimeTestFixture, PrimeTest1) {
 TEST_F(PrimeTestFixture, PrimeTest2) {
 	expected = {2};
 	EXPECT_EQ(expected, prime_factor.of(2));
+
 }
